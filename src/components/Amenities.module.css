@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 1.5em;
+}
+.amenity {
+  width: 65px;
+}
+.amenityDisabled {
+  width: 65px;
+  opacity: 0.5;
+}
+
+.icon {
+  display: flex;
+  gap: 0.35em;
+  height: 42px;
+  align-items: flex-start;
+}
+
+.amenity__name {
+  text-align: center;
+  margin-top: 0.5rem;
+  transform: translateX(-12px);
+  font-size: 0.625rem;
+  font-weight: 300;
+}

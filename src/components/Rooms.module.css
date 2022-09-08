@@ -1,0 +1,27 @@
+.rooms {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  align-self: center;
+  display: block;
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.rooms__name {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(56, 71, 11, 0.6);
+  opacity: 0%;
+}
+
+.rooms__name:hover {
+  opacity: 100%;
+}

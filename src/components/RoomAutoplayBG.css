@@ -1,0 +1,40 @@
+#roomBgSwiperPagination {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25%;
+  /* background-color: red; */
+}
+
+#roomBgSwiperPagination > * {
+  height: 12px;
+  border: 1px solid #38470b;
+}
+
+#roomBgSwiperPagination > .swiper-pagination-bullet-active {
+  background-color: #949c7c;
+}
+
+@media (max-width: 672px) {
+  #roomBgSwiperPagination {
+    position: absolute;
+    top: 42%;
+  }
+}
+
+/* 
+
+
+@media (min-width: 672px) {
+  #roomBgSwiperPagination {
+    position: relative;
+    top: 65%;
+    left: 50%;
+    z-index: 4;
+  }
+} */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}

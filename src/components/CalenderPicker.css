@@ -1,0 +1,32 @@
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span {
+  color: rgb(255, 255, 255);
+}
+
+.rdrMonthAndYearWrapper {
+  max-width: 664px;
+}
+
+.rdrInRange {
+  background-color: #0000000a;
+}
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span {
+  color: #38470b;
+}
+
+.rdrEndEdge {
+  background-color: #949c7c;
+}
+
+.rdrDayDisabled .rdrDayNumber span {
+  text-decoration: line-through;
+  background-color: #fff;
+}
+
+.rdrDayDisabled {
+  text-decoration: line-through;
+  background-color: #fff;
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span {
+  background-color: transparent;
+}
