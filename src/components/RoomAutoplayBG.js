@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 
 import "./RoomAutoplayBG.css";
 import styles from "./RoomAutoplayBG.module.css";
-import Modal from "../Modal/Modal";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 

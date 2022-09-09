@@ -51,7 +51,6 @@ export default function Rooms(props) {
   }, [roomUrls]);
 
   useEffect(() => {
-    console.log("Loading your feline friends....");
     const storageRoomNames = localStorage.getItem("roomNames");
     const storageRoomUrls = localStorage.getItem("roomUrls");
     const storageRoomIds = localStorage.getItem("roomIds");

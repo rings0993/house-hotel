@@ -49,8 +49,8 @@ export default function BookingModal(props) {
   const roomData = JSON.parse(localStorage.getItem("roomData"));
   const roomBooking = JSON.parse(localStorage.getItem("bookingData"));
 
-  const normalDayPrice = roomData.normalDayPrice;
-  const holidayPrice = roomData.holidayPrice;
+  const normalDayPrice = roomData?.normalDayPrice || 0;
+  const holidayPrice = roomData?.holidayPrice || 0;
   const price = `${numberWithCommas(
     weekdays.workdaysCount * normalDayPrice +
       weekdays.holidaysCount * holidayPrice
@@ -161,10 +161,10 @@ export default function BookingModal(props) {
           <p className={styles.summaryDays}>
             {" "}
             {totalDays.totalDays + 1}天
-            {weekdays.workdaysCount > 1
+            {weekdays.workdaysCount >= 1
               ? `，${weekdays.workdaysCount}晚平日`
               : ""}
-            {weekdays.holidaysCount > 1
+            {weekdays.holidaysCount >= 1
               ? `，${weekdays.holidaysCount}晚假日`
               : ""}
           </p>

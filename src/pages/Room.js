@@ -70,6 +70,7 @@ export default function Room(props) {
     fetch(url, requestOptions)
       .then(res => res.json()) //gives data in json
       .then(data => {
+        console.log("data laoded:", data);
         setRoomData(data.room[0]);
         setRoomBooking(data.booking);
       })
@@ -125,10 +126,6 @@ export default function Room(props) {
     localStorage.setItem("roomData", JSON.stringify(roomData));
     localStorage.setItem("bookingData", JSON.stringify(roomBooking));
   }
-  const onclickBookingHandler = e => {
-    e.preventDefault();
-    setModalState(true);
-  };
 
   return (
     <div className={styles.container}>
