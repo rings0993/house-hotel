@@ -30,3 +30,7 @@
 .rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span {
   background-color: transparent;
 }
+
+.rdrMonth {
+  width: 100%;
+}

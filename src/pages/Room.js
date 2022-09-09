@@ -17,6 +17,7 @@ import {
   selectBookingModalState,
 } from "../features/modalState/modalStateSlice";
 
+import useWindowDimensions from "../hooks/useWindowDimensions";
 import { useEffect, useState, useCallback } from "react";
 import { API_KEY } from "../config/config";
 import styles from "./Room.module.css";
@@ -33,6 +34,8 @@ const bg3 = "../img/bg3.png";
 const bg4 = "../img/bg4.png";
 
 export default function Room(props) {
+  const { height, width } = useWindowDimensions();
+  const calenderMonth = width > 672 ? 2 : 1;
   const bookingModal = useSelector(selectBookingModalState);
   const bookingDays = useSelector(selectBookingDays);
   const totalDays = useSelector(selectTotalDays);
@@ -195,11 +198,11 @@ export default function Room(props) {
         <div className={styles.datepicker__selector}>
           <CalenderPicker
             bookingData={roomBooking}
-            numOfMonth={2}
+            numOfMonth={calenderMonth}
           ></CalenderPicker>
         </div>
       </div>
-      <BookingModal show={bookingModal}></BookingModal>
+      {bookingModal ? <BookingModal show={bookingModal}></BookingModal> : null}
     </div>
   );
 }
